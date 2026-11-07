@@ -1,0 +1,512 @@
+{
+ "region": "dong-bang-bac-bo",
+ "grade": 1,
+ "templates": [
+  {
+   "id": "l1-count-choice-d1",
+   "grade": 1,
+   "topic": "dem-so",
+   "skill": "calc",
+   "difficulty": 1,
+   "type": "choice",
+   "op": "count",
+   "value_tag": "tuong-than",
+   "review_status": "approved",
+   "a": {
+    "min": 1,
+    "max": 5
+   },
+   "item": {
+    "emoji": "🥚",
+    "name": "quả trứng"
+   },
+   "text": "Mẹ đi chợ mua trứng gà. Bé hãy đếm xem có bao nhiêu {name}?",
+   "hints": [
+    "Chỉ vào từng {name} và đếm từng cái một.",
+    "Đếm chậm: một, hai, ba… mỗi lần đếm chạm vào một {name}.",
+    "Có tất cả {a} {name}. Hãy chọn số {a}."
+   ]
+  },
+  {
+   "id": "l1-count-choice-d2",
+   "grade": 1,
+   "topic": "dem-so",
+   "skill": "calc",
+   "difficulty": 2,
+   "type": "choice",
+   "op": "count",
+   "value_tag": "tuong-than",
+   "review_status": "approved",
+   "a": {
+    "min": 6,
+    "max": 10
+   },
+   "item": {
+    "emoji": "🍌",
+    "name": "quả chuối"
+   },
+   "text": "Bà bán chuối ở chợ quê. Bé đếm giúp bà xem có bao nhiêu {name}?",
+   "hints": [
+    "Chỉ vào từng {name} và đếm từng cái một.",
+    "Đếm chậm: một, hai, ba… mỗi lần đếm chạm vào một {name}.",
+    "Có tất cả {a} {name}. Hãy chọn số {a}."
+   ]
+  },
+  {
+   "id": "l1-count-choice-d3",
+   "grade": 1,
+   "topic": "dem-so",
+   "skill": "calc",
+   "difficulty": 3,
+   "type": "choice",
+   "op": "count",
+   "value_tag": "tuong-than",
+   "review_status": "approved",
+   "a": {
+    "min": 11,
+    "max": 15
+   },
+   "item": {
+    "emoji": "🥭",
+    "name": "quả xoài"
+   },
+   "text": "Chợ quê bán xoài ngon. Bé đếm xem có bao nhiêu {name}?",
+   "hints": [
+    "Chỉ vào từng {name} và đếm từng cái một.",
+    "Đếm chậm: một, hai, ba… mỗi lần đếm chạm vào một {name}.",
+    "Có tất cả {a} {name}. Hãy chọn số {a}."
+   ]
+  },
+  {
+   "id": "l1-count-basket-d1",
+   "grade": 1,
+   "topic": "dem-so",
+   "skill": "calc",
+   "difficulty": 1,
+   "type": "basket",
+   "op": "count",
+   "value_tag": "tuong-than",
+   "review_status": "approved",
+   "a": {
+    "min": 1,
+    "max": 5
+   },
+   "item": {
+    "emoji": "🥚",
+    "name": "quả trứng"
+   },
+   "text": "Mẹ nhờ bé xếp {a} {name} vào giỏ tre.",
+   "hints": [
+    "Chỉ vào từng {name} và đếm từng cái một.",
+    "Đếm chậm: một, hai, ba… mỗi lần đếm chạm vào một {name}.",
+    "Có tất cả {a} {name}. Hãy chọn số {a}."
+   ]
+  },
+  {
+   "id": "l1-count-basket-d2",
+   "grade": 1,
+   "topic": "dem-so",
+   "skill": "calc",
+   "difficulty": 2,
+   "type": "basket",
+   "op": "count",
+   "value_tag": "tuong-than",
+   "review_status": "approved",
+   "a": {
+    "min": 6,
+    "max": 10
+   },
+   "item": {
+    "emoji": "🍊",
+    "name": "quả cam"
+   },
+   "text": "Bé giúp bà xếp {a} {name} vào giỏ tre.",
+   "hints": [
+    "Chỉ vào từng {name} và đếm từng cái một.",
+    "Đếm chậm: một, hai, ba… mỗi lần đếm chạm vào một {name}.",
+    "Có tất cả {a} {name}. Hãy chọn số {a}."
+   ]
+  },
+  {
+   "id": "l1-count-basket-d3",
+   "grade": 1,
+   "topic": "dem-so",
+   "skill": "calc",
+   "difficulty": 3,
+   "type": "basket",
+   "op": "count",
+   "value_tag": "yeu-kinh-ong-ba",
+   "review_status": "approved",
+   "a": {
+    "min": 11,
+    "max": 15
+   },
+   "item": {
+    "emoji": "🌸",
+    "name": "bông hoa"
+   },
+   "text": "Bé chọn {a} {name} cắm tặng ông bà.",
+   "hints": [
+    "Chỉ vào từng {name} và đếm từng cái một.",
+    "Đếm chậm: một, hai, ba… mỗi lần đếm chạm vào một {name}.",
+    "Có tất cả {a} {name}. Hãy chọn số {a}."
+   ]
+  },
+  {
+   "id": "l1-add-d1",
+   "grade": 1,
+   "topic": "cong-pham-vi-20",
+   "skill": "calc",
+   "difficulty": 1,
+   "type": "choice",
+   "op": "add",
+   "value_tag": "yeu-kinh-ong-ba",
+   "review_status": "approved",
+   "a": {
+    "min": 1,
+    "max": 5
+   },
+   "b": {
+    "min": 1,
+    "max": 4
+   },
+   "maxResult": 10,
+   "item": {
+    "emoji": "🥚",
+    "name": "quả trứng"
+   },
+   "text": "Mẹ có {a} {name}. Bà cho thêm {b} {name}. Hỏi mẹ có tất cả bao nhiêu {name}?",
+   "hints": [
+    "Hãy đếm tất cả {name} của hai nhóm.",
+    "Gộp hai nhóm lại: {a} và {b}.",
+    "Đếm tiếp từ {a}, đếm thêm {b} lần nữa. Kết quả là {result}."
+   ]
+  },
+  {
+   "id": "l1-add-d2",
+   "grade": 1,
+   "topic": "cong-pham-vi-20",
+   "skill": "word",
+   "difficulty": 2,
+   "type": "choice",
+   "op": "add",
+   "value_tag": "tuong-than",
+   "review_status": "approved",
+   "a": {
+    "min": 3,
+    "max": 9
+   },
+   "b": {
+    "min": 2,
+    "max": 8
+   },
+   "maxResult": 10,
+   "item": {
+    "emoji": "🍊",
+    "name": "quả cam"
+   },
+   "text": "Bé hái được {a} {name}, bạn Lan hái thêm {b} {name}. Cả hai bạn hái được bao nhiêu {name}?",
+   "hints": [
+    "Hãy đếm tất cả {name} của hai nhóm.",
+    "Gộp hai nhóm lại: {a} và {b}.",
+    "Đếm tiếp từ {a}, đếm thêm {b} lần nữa. Kết quả là {result}."
+   ]
+  },
+  {
+   "id": "l1-add-d3",
+   "grade": 1,
+   "topic": "cong-pham-vi-20",
+   "skill": "word",
+   "difficulty": 3,
+   "type": "choice",
+   "op": "add",
+   "value_tag": "trung-thuc",
+   "review_status": "approved",
+   "a": {
+    "min": 6,
+    "max": 12
+   },
+   "b": {
+    "min": 3,
+    "max": 9
+   },
+   "maxResult": 20,
+   "item": {
+    "emoji": "🥭",
+    "name": "quả xoài"
+   },
+   "text": "Gian hàng có {a} {name}, buổi chiều thêm {b} {name}. Hỏi gian hàng có tất cả bao nhiêu {name}?",
+   "hints": [
+    "Hãy đếm tất cả {name} của hai nhóm.",
+    "Gộp hai nhóm lại: {a} và {b}.",
+    "Đếm tiếp từ {a}, đếm thêm {b} lần nữa. Kết quả là {result}."
+   ]
+  },
+  {
+   "id": "l1-sub-d1",
+   "grade": 1,
+   "topic": "tru-pham-vi-20",
+   "skill": "calc",
+   "difficulty": 1,
+   "type": "choice",
+   "op": "sub",
+   "value_tag": "tuong-than",
+   "review_status": "approved",
+   "a": {
+    "min": 3,
+    "max": 8
+   },
+   "b": {
+    "min": 1,
+    "max": 3
+   },
+   "maxResult": 10,
+   "item": {
+    "emoji": "🍌",
+    "name": "quả chuối"
+   },
+   "text": "Mẹ có {a} {name}, mẹ cho hàng xóm {b} {name}. Hỏi mẹ còn lại bao nhiêu {name}?",
+   "hints": [
+    "Có {a} {name}, lấy đi {b} cái.",
+    "Gạch bỏ {b} {name} rồi đếm số còn lại.",
+    "Từ {a} đếm lùi {b} lần. Còn lại {result}."
+   ]
+  },
+  {
+   "id": "l1-sub-d2",
+   "grade": 1,
+   "topic": "tru-pham-vi-20",
+   "skill": "word",
+   "difficulty": 2,
+   "type": "choice",
+   "op": "sub",
+   "value_tag": "yeu-kinh-ong-ba",
+   "review_status": "approved",
+   "a": {
+    "min": 6,
+    "max": 10
+   },
+   "b": {
+    "min": 2,
+    "max": 7
+   },
+   "maxResult": 10,
+   "item": {
+    "emoji": "🍊",
+    "name": "quả cam"
+   },
+   "text": "Bé có {a} {name}, bé biếu bà {b} {name}. Hỏi bé còn lại bao nhiêu {name}?",
+   "hints": [
+    "Có {a} {name}, lấy đi {b} cái.",
+    "Gạch bỏ {b} {name} rồi đếm số còn lại.",
+    "Từ {a} đếm lùi {b} lần. Còn lại {result}."
+   ]
+  },
+  {
+   "id": "l1-sub-d3",
+   "grade": 1,
+   "topic": "tru-pham-vi-20",
+   "skill": "word",
+   "difficulty": 3,
+   "type": "choice",
+   "op": "sub",
+   "value_tag": "tiet-kiem",
+   "review_status": "approved",
+   "a": {
+    "min": 11,
+    "max": 20
+   },
+   "b": {
+    "min": 3,
+    "max": 9
+   },
+   "maxResult": 20,
+   "item": {
+    "emoji": "🥚",
+    "name": "quả trứng"
+   },
+   "text": "Gà mái đẻ được {a} {name}, mẹ bán đi {b} {name}. Hỏi còn lại bao nhiêu {name}?",
+   "hints": [
+    "Có {a} {name}, lấy đi {b} cái.",
+    "Gạch bỏ {b} {name} rồi đếm số còn lại.",
+    "Từ {a} đếm lùi {b} lần. Còn lại {result}."
+   ]
+  },
+  {
+   "id": "l1-shape-choice-d1",
+   "grade": 1,
+   "topic": "hinh-phang",
+   "skill": "space",
+   "difficulty": 1,
+   "type": "choice",
+   "op": "shape",
+   "value_tag": "tuong-than",
+   "review_status": "approved",
+   "shapes": [
+    {
+     "emoji": "🟩",
+     "name": "bánh chưng",
+     "shape": "vuong"
+    },
+    {
+     "emoji": "⚪",
+     "name": "bánh đa nem",
+     "shape": "tron"
+    },
+    {
+     "emoji": "🔺",
+     "name": "chiếc nón lá",
+     "shape": "tam-giac"
+    },
+    {
+     "emoji": "🟠",
+     "name": "mâm cơm",
+     "shape": "tron"
+    },
+    {
+     "emoji": "🟦",
+     "name": "khăn mùi xoa",
+     "shape": "vuong"
+    }
+   ],
+   "text": "Ở chợ quê có {name}. Nó có dạng hình gì?",
+   "hints": [
+    "Nhìn kĩ hình dạng của {name}.",
+    "Hình tròn không có góc; hình vuông có 4 góc; hình tam giác có 3 góc.",
+    "{name} có dạng hình nào trong ba hình này?"
+   ]
+  },
+  {
+   "id": "l1-shape-choice-d2",
+   "grade": 1,
+   "topic": "hinh-phang",
+   "skill": "space",
+   "difficulty": 2,
+   "type": "choice",
+   "op": "shape",
+   "value_tag": "tuong-than",
+   "review_status": "approved",
+   "shapes": [
+    {
+     "emoji": "🟩",
+     "name": "bánh chưng",
+     "shape": "vuong"
+    },
+    {
+     "emoji": "⚪",
+     "name": "bánh đa nem",
+     "shape": "tron"
+    },
+    {
+     "emoji": "🔺",
+     "name": "chiếc nón lá",
+     "shape": "tam-giac"
+    },
+    {
+     "emoji": "🟠",
+     "name": "mâm cơm",
+     "shape": "tron"
+    },
+    {
+     "emoji": "🟦",
+     "name": "khăn mùi xoa",
+     "shape": "vuong"
+    }
+   ],
+   "text": "Bé nhìn thấy {name} trên sạp hàng. Hình dạng của nó giống hình nào?",
+   "hints": [
+    "Nhìn kĩ hình dạng của {name}.",
+    "Hình tròn không có góc; hình vuông có 4 góc; hình tam giác có 3 góc.",
+    "{name} có dạng hình nào trong ba hình này?"
+   ]
+  },
+  {
+   "id": "l1-shape-classify-d2",
+   "grade": 1,
+   "topic": "hinh-phang",
+   "skill": "space",
+   "difficulty": 2,
+   "type": "classify",
+   "op": "shape",
+   "value_tag": "tuong-than",
+   "review_status": "approved",
+   "shapes": [
+    {
+     "emoji": "🟩",
+     "name": "bánh chưng",
+     "shape": "vuong"
+    },
+    {
+     "emoji": "⚪",
+     "name": "bánh đa nem",
+     "shape": "tron"
+    },
+    {
+     "emoji": "🔺",
+     "name": "chiếc nón lá",
+     "shape": "tam-giac"
+    },
+    {
+     "emoji": "🟠",
+     "name": "mâm cơm",
+     "shape": "tron"
+    },
+    {
+     "emoji": "🟦",
+     "name": "khăn mùi xoa",
+     "shape": "vuong"
+    }
+   ],
+   "text": "Giúp mẹ xếp đồ vào đúng giỏ: mỗi món đồ có dạng hình gì thì vào giỏ hình đó.",
+   "hints": [
+    "Nhìn kĩ từng món đồ.",
+    "Hình tròn không có góc; hình vuông có 4 góc.",
+    "Chạm món đồ rồi chạm giỏ đúng hình dạng của nó."
+   ]
+  },
+  {
+   "id": "l1-shape-classify-d3",
+   "grade": 1,
+   "topic": "hinh-phang",
+   "skill": "space",
+   "difficulty": 3,
+   "type": "classify",
+   "op": "shape",
+   "value_tag": "tuong-than",
+   "review_status": "approved",
+   "shapes": [
+    {
+     "emoji": "🟩",
+     "name": "bánh chưng",
+     "shape": "vuong"
+    },
+    {
+     "emoji": "⚪",
+     "name": "bánh đa nem",
+     "shape": "tron"
+    },
+    {
+     "emoji": "🔺",
+     "name": "chiếc nón lá",
+     "shape": "tam-giac"
+    },
+    {
+     "emoji": "🟠",
+     "name": "mâm cơm",
+     "shape": "tron"
+    },
+    {
+     "emoji": "🟦",
+     "name": "khăn mùi xoa",
+     "shape": "vuong"
+    }
+   ],
+   "text": "Cả làng cùng dọn sạp chợ! Bé phân loại từng món đồ theo hình dạng nhé.",
+   "hints": [
+    "Nhìn kĩ từng món đồ.",
+    "Hình tròn không có góc; hình vuông có 4 góc.",
+    "Chạm món đồ rồi chạm giỏ đúng hình dạng của nó."
+   ]
+  }
+ ]
+}

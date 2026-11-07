@@ -1,0 +1,13 @@
+{
+  "name": "Toán Làng Sen",
+  "short_name": "Toán Làng Sen",
+  "description": "Chạm bài toán thật – Bật sáng tư duy",
+  "lang": "vi",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff8ec",
+  "theme_color": "#2f7d4f",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
