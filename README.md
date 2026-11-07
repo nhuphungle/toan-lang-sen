@@ -10,7 +10,7 @@ npm run verify       # test + kiểm định nội dung
 PLAYWRIGHT_PATH=/đường/dẫn/node_modules/playwright npm run test:e2e   # e2e trên Chromium
 PLAYWRIGHT_PATH=/đường/dẫn/node_modules/playwright npm run test:e2e:farm   # e2e riêng cho nông trại
 ```
-Cần Node ≥ 20. **Không có dependency.**
+Cần Node ≥ 22. **Không có dependency.**
 
 ## Cấu trúc
 `public/` (ứng dụng) · `server.mjs`, `headers.mjs` (server tĩnh + security headers) · `tests/` · `scripts/` · `docs/` (yêu cầu, thiết kế/threat model, kế hoạch test, rà soát bảo mật).
