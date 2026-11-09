@@ -8,7 +8,7 @@ export const AVATAR_INFO = {
 };
 
 // Mỗi loại cây có hình riêng ở từng giai đoạn; số giai đoạn khác nhau nên tốc độ lớn cũng khác (tổng 2 giờ).
-// kind: plant (lớn dần qua `stages`, chín thì thu hoạch được) | egg (ấp qua `stages`, nở thành `hatchName`, không thu hoạch)
+// kind: plant (lớn dần qua `stages`, chín hẳn thì tính vào đổi quà) | egg (ấp qua `stages`, nở thành `hatchName`, cũng tính vào đổi quà)
 //       | wear (mặc cho nhân vật, theo `slot`).
 // Animal/plant mua được nhiều lần (tối đa MAX_STACK); wear chỉ có một.
 export const FARM_ITEMS = [
@@ -56,7 +56,7 @@ export function formatCountdown(ms) {
   return h > 0 ? `${h}:${String(m).padStart(2, '0')}:${sec}` : `${m}:${sec}`;
 }
 
-// Quà bé nhận khi thu hoạch (thay vì xu). Chỉ để sưu tầm trong "Kho quà của bé".
+// Quà bé đổi được khi lấp đầy nông trại bằng cây/gà đã lớn (xem exchangeGift). Chỉ để sưu tầm trong "Kho quà của bé".
 export const GIFTS = [
   { id: 'gau-bong', name: 'Gấu bông', emoji: '🧸' },
   { id: 'keo', name: 'Kẹo', emoji: '🍬' },
@@ -65,34 +65,38 @@ export const GIFT_IDS = GIFTS.map((g) => g.id);
 export const MAX_GIFT = 999;
 export const emptyGifts = () => Object.fromEntries(GIFT_IDS.map((id) => [id, 0]));
 
-export const harvestCoins = (item) => Math.floor(item.cost / 2);
 export const isGrown = (item, at, now) => !!item.stages && growthStage(item, at, now) === item.stages.length - 1;
 
+/** Tình trạng nông trại: số ô đã đặt và số ô đã lớn hẳn (cây chín, trứng đã nở thành gà). */
+export function farmProgress(p, now) {
+  let placed = 0;
+  let grown = 0;
+  for (let i = 0; i < FARM_SLOTS; i++) {
+    const slot = p.farm.slots[i];
+    const item = slot && findItem(slot.id);
+    if (!item) continue;
+    placed += 1;
+    if (isGrown(item, slot.at, now)) grown += 1;
+  }
+  return { placed, grown, total: FARM_SLOTS, full: placed === FARM_SLOTS, ready: placed === FARM_SLOTS && grown === FARM_SLOTS };
+}
+
 /**
- * Thu hoạch cây đã lớn ở ô `slotIndex`. choice: 'coins' hoặc id của một món quà.
- * Cây bị lấy khỏi ô và khỏi kho (nên mua lại được). Không đột biến đầu vào.
+ * Đổi quà: chỉ khi CẢ nông trại đã đầy (mọi ô có cây hoặc gà) và mọi cây đã chín, mọi trứng đã nở.
+ * Đổi 1 món quà, toàn bộ ô đất trống ra và các vật đó rời kho (nên phải mua lại). Không đột biến đầu vào.
  */
-export function harvest(p, slotIndex, choice, now) {
-  const slot = p.farm.slots[slotIndex];
-  const item = slot && findItem(slot.id);
-  if (!item || item.kind !== 'plant') return { ok: false, reason: 'not-plant' }; // trứng/gà không thu hoạch
-  if (!isGrown(item, slot.at, now)) return { ok: false, reason: 'not-ready' };
-  if (choice !== 'coins' && !GIFT_IDS.includes(choice)) return { ok: false, reason: 'bad-choice' };
-  const gifts = { ...p.gifts };
-  let coins = p.coins;
-  if (choice === 'coins') coins += harvestCoins(item);
-  else gifts[choice] = Math.min(MAX_GIFT, (gifts[choice] || 0) + 1);
-  const at = p.inventory.indexOf(slot.id);
-  return {
-    ok: true,
-    profile: {
-      ...p,
-      coins,
-      gifts,
-      inventory: p.inventory.filter((_, i) => i !== at),
-      farm: { ...p.farm, slots: p.farm.slots.map((x, i) => (i === slotIndex ? null : x)) },
-    },
-  };
+export function exchangeGift(p, choice, now) {
+  if (!GIFT_IDS.includes(choice)) return { ok: false, reason: 'bad-choice' };
+  const prog = farmProgress(p, now);
+  if (!prog.full) return { ok: false, reason: 'not-full' };
+  if (!prog.ready) return { ok: false, reason: 'not-ready' };
+  const inventory = p.inventory.slice();
+  for (let i = 0; i < FARM_SLOTS; i++) {
+    const at = inventory.indexOf(p.farm.slots[i].id);
+    if (at >= 0) inventory.splice(at, 1);
+  }
+  const gifts = { ...p.gifts, [choice]: Math.min(MAX_GIFT, (p.gifts[choice] || 0) + 1) };
+  return { ok: true, profile: { ...p, gifts, inventory, farm: { ...p.farm, slots: new Array(FARM_SLOTS).fill(null) } } };
 }
 
 export const BADGES = [
