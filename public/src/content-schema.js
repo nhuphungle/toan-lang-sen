@@ -2,18 +2,19 @@
 // Không có eval/Function: công thức chọn từ tập `op` cố định.
 
 export const GRADES = [1, 2, 3, 4, 5];
-export const TOPICS = ['dem-so', 'cong-pham-vi-20', 'tru-pham-vi-20', 'hinh-phang'];
+export const TOPICS = ['dem-so', 'cong-pham-vi-20', 'tru-pham-vi-20', 'hinh-phang', 'so-sanh', 'day-so', 'tim-so-con-thieu'];
 export const SKILLS = ['calc', 'space', 'word']; // tính nhanh / tư duy không gian / lời văn
 export const TYPES = ['choice', 'basket', 'classify'];
-export const OPS = ['count', 'add', 'sub', 'shape'];
+export const OPS = ['count', 'add', 'sub', 'shape', 'compare', 'sign', 'neighbor', 'sequence'];
 export const SHAPES = ['tron', 'vuong', 'tam-giac'];
 export const SHAPE_LABEL = { tron: 'Hình tròn', vuong: 'Hình vuông', 'tam-giac': 'Hình tam giác' };
 export const VALUE_TAGS = ['tiet-kiem', 'tuong-than', 'bao-ve-moi-truong', 'yeu-kinh-ong-ba', 'trung-thuc', 'none'];
-export const PLACEHOLDERS = ['a', 'b', 'name', 'result'];
+export const PLACEHOLDERS = ['a', 'b', 'c', 'name', 'result', 'who', 'step'];
 
 export const LIMITS = Object.freeze({
   maxTemplates: 500,
   maxText: 240,
+  maxVariants: 12,
   maxHint: 160,
   maxFileBytes: 512 * 1024,
   maxNumber: 100,
@@ -60,24 +61,59 @@ export function validateTemplate(t) {
   if (!OPS.includes(t.op)) errs.push('op: không hợp lệ');
   if (!VALUE_TAGS.includes(t.value_tag)) errs.push('value_tag: không hợp lệ');
   if (t.review_status !== 'approved' && t.review_status !== 'draft') errs.push('review_status: approved|draft');
-  checkText('text', t.text, LIMITS.maxText, errs);
+  // `text` (một câu) hoặc `texts` (nhiều cách hỏi, mỗi lần sinh chọn ngẫu nhiên một câu).
+  if ((t.text === undefined) === (t.texts === undefined)) errs.push('cần đúng một trong text | texts');
+  else if (t.text !== undefined) checkText('text', t.text, LIMITS.maxText, errs);
+  else if (!Array.isArray(t.texts) || t.texts.length < 1 || t.texts.length > LIMITS.maxVariants) errs.push(`texts: 1..${LIMITS.maxVariants} câu`);
+  else t.texts.forEach((x, i) => checkText(`texts[${i}]`, x, LIMITS.maxText, errs));
 
   if (!Array.isArray(t.hints) || t.hints.length !== 3) errs.push('hints: cần đúng 3 mức gợi ý');
   else t.hints.forEach((h, i) => checkText(`hints[${i}]`, h, LIMITS.maxHint, errs));
 
   // Ràng buộc theo op/type
   if (t.op === 'count' || t.op === 'add' || t.op === 'sub') {
-    if (!isObj(t.item) || !EMOJI_RE.test(t.item.emoji ?? '')) errs.push('item.emoji: cần emoji hợp lệ');
-    else checkText('item.name', t.item.name, 40, errs);
+    // `item` (một vật) hoặc `items` (nhiều vật, mỗi lần sinh chọn ngẫu nhiên một)
+    const pool = t.items !== undefined ? t.items : t.item !== undefined ? [t.item] : null;
+    if ((t.item === undefined) === (t.items === undefined)) errs.push('cần đúng một trong item | items');
+    else if (!Array.isArray(pool) || pool.length < 1 || pool.length > LIMITS.maxVariants) errs.push(`items: 1..${LIMITS.maxVariants} vật`);
+    else pool.forEach((it, i) => {
+      if (!isObj(it) || !EMOJI_RE.test(it.emoji ?? '')) errs.push(`items[${i}].emoji: cần emoji hợp lệ`);
+      else checkText(`items[${i}].name`, it.name, 40, errs);
+    });
     const okA = checkRange('a', t.a, errs);
     if (t.op !== 'count') {
       const okB = checkRange('b', t.b, errs);
+      if (t.ask !== undefined && t.ask !== 'result' && t.ask !== 'b') errs.push('ask: result|b');
       if (!isInt(t.maxResult, 1, LIMITS.maxNumber)) errs.push('maxResult: 1..100');
       else if (okA && okB && t.op === 'add' && t.a.min + t.b.min > t.maxResult) errs.push('add: không có cặp (a,b) nào thoả maxResult');
       if (okA && okB && t.op === 'sub' && t.a.max < t.b.min) errs.push('sub: không có cặp (a,b) nào thoả a>=b');
     }
     if (t.op === 'count' && t.type === 'classify') errs.push('count không dùng type classify');
     if (t.op !== 'count' && t.type !== 'choice') errs.push(`${t.op} chỉ dùng type choice`);
+  }
+  if (t.op === 'compare' || t.op === 'sign' || t.op === 'neighbor' || t.op === 'sequence') {
+    if (t.type !== 'choice') errs.push(`${t.op} chỉ dùng type choice`);
+    const okA = checkRange('a', t.a, errs);
+    if (t.op === 'compare') {
+      if (t.ask !== 'max' && t.ask !== 'min') errs.push('ask: max|min');
+      if (okA && t.a.max - t.a.min < 2) errs.push('compare: khoảng a cần ít nhất 3 số khác nhau');
+    }
+    if (t.op === 'sign' && okA && t.a.max === t.a.min) errs.push('sign: khoảng a cần ≥2 số');
+    if (t.op === 'neighbor') {
+      if (t.ask !== 'next' && t.ask !== 'prev') errs.push('ask: next|prev');
+      else if (okA && t.ask === 'prev' && t.a.min < 1) errs.push('neighbor prev: a.min >= 1');
+      else if (okA && t.ask === 'next' && t.a.max + 1 > LIMITS.maxNumber) errs.push('neighbor next: a.max+1 vượt giới hạn');
+    }
+    if (t.op === 'sequence') {
+      const okS = checkRange('step', t.step, errs);
+      if (t.dir !== 'up' && t.dir !== 'down') errs.push('dir: up|down');
+      if (!isInt(t.maxResult, 1, LIMITS.maxNumber)) errs.push('maxResult: 1..100');
+      else if (okA && okS && t.step.min >= 1) {
+        if (t.dir === 'up' && t.a.min + 3 * t.step.min > t.maxResult) errs.push('sequence up: không có dãy nào thoả maxResult');
+        if (t.dir === 'down' && t.a.max - 3 * t.step.min < 0) errs.push('sequence down: không có dãy nào thoả >= 0');
+      }
+      if (okS && t.step.min < 1) errs.push('step.min >= 1');
+    }
   }
   if (t.op === 'shape') {
     if (!Array.isArray(t.shapes) || t.shapes.length < 2 || t.shapes.length > 8) errs.push('shapes: 2..8 phần tử');
