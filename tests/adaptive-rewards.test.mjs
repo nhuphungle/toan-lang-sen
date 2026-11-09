@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { updateSkill, defaultSkill, hintLevel, UP_STREAK } from '../public/src/adaptive.js';
-import { xpForAnswer, levelFromXp, buyItem, recordAnswer, newBadges, FARM_ITEMS, MAX_STACK, GROW_TOTAL_MS, growthStage, msUntilGrown, formatCountdown, harvest, harvestCoins, MAX_GIFT } from '../public/src/rewards.js';
+import { xpForAnswer, levelFromXp, buyItem, recordAnswer, newBadges, FARM_ITEMS, MAX_STACK, GROW_TOTAL_MS, growthStage, msUntilGrown, formatCountdown, exchangeGift, farmProgress, FARM_SLOTS, MAX_GIFT } from '../public/src/rewards.js';
 import { defaultState } from '../public/src/storage.js';
 
 test('đúng liên tiếp 5 -> lên mức; ở mức cao nhất -> mở thử thách', () => {
@@ -110,21 +110,30 @@ test('đồng hồ đếm ngược: định dạng h:mm:ss / m:ss, làm tròn l�
   assert.equal(formatCountdown(-5000), '0:00');
 });
 
-test('thu hoạch: cây chín đổi xu hoặc quà, ô trống ra, cây rời kho; từ chối khi chưa chín/sai lựa chọn', () => {
-  const rice = FARM_ITEMS.find((i) => i.id === 'ruong-lua');
-  const chicken = FARM_ITEMS.find((i) => i.kind === 'egg');
-  const mk = () => Object.freeze({ coins: 10, gifts: { 'gau-bong': 0, keo: 0 }, inventory: Object.freeze(['ruong-lua', 'ruong-lua', chicken.id]),
-    farm: Object.freeze({ outfit: {}, slots: Object.freeze([{ id: 'ruong-lua', at: 0 }, { id: 'ruong-lua', at: 5 * GROW_TOTAL_MS }, { id: chicken.id, at: 0 }, null]) }) });
+test('đổi quà: chỉ khi đầy đủ ô và mọi cây/gà đã lớn; đổi 1 quà, TẤT CẢ ô trống, vật rời kho', () => {
+  const chicken = FARM_ITEMS.find((i) => i.kind === 'egg').id;
   const now = 2 * GROW_TOTAL_MS;
-  const a = harvest(mk(), 0, 'coins', now);
-  assert.equal(a.ok, true); assert.equal(a.profile.coins, 10 + harvestCoins(rice)); assert.equal(harvestCoins(rice), 30);
-  assert.equal(a.profile.farm.slots[0], null); assert.deepEqual(a.profile.inventory, ['ruong-lua', chicken.id]);
-  const g = harvest(mk(), 0, 'gau-bong', now);
-  assert.equal(g.profile.gifts['gau-bong'], 1); assert.equal(g.profile.coins, 10);
-  assert.equal(harvest(mk(), 1, 'coins', now).reason, 'not-ready');      // cây mới đặt chưa chín
-  assert.equal(harvest(mk(), 2, 'coins', now).reason, 'not-plant');      // trứng (kể cả đã nở thành gà) không thu hoạch
-  assert.equal(harvest(mk(), 3, 'coins', now).reason, 'not-plant');      // ô trống
-  for (const bad of ['xu', '__proto__', 'constructor', undefined]) assert.equal(harvest(mk(), 0, bad, now).reason, 'bad-choice');
+  const ids = (n) => Array.from({ length: n }, (_, i) => (i % 2 ? chicken : 'ruong-lua'));
+  const mk = (n = FARM_SLOTS, at = 0) => {
+    const inv = ids(n);
+    const slots = Array.from({ length: FARM_SLOTS }, (_, i) => (i < n ? { id: inv[i], at } : null));
+    return Object.freeze({ coins: 10, gifts: { 'gau-bong': 0, keo: 0 }, inventory: Object.freeze([...inv, 'non-la']), farm: Object.freeze({ outfit: {}, slots: Object.freeze(slots) }) });
+  };
+  assert.deepEqual(farmProgress(mk(), now), { placed: FARM_SLOTS, grown: FARM_SLOTS, total: FARM_SLOTS, full: true, ready: true });
+  const ok = exchangeGift(mk(), 'gau-bong', now);
+  assert.equal(ok.ok, true);
+  assert.equal(ok.profile.gifts['gau-bong'], 1); assert.equal(ok.profile.gifts.keo, 0);
+  assert.equal(ok.profile.coins, 10); // không cộng xu
+  assert.deepEqual(ok.profile.farm.slots, new Array(FARM_SLOTS).fill(null));
+  assert.deepEqual(ok.profile.inventory, ['non-la']); // chỉ còn đồ mặc, mọi cây/gà đã dùng hết
+  // thiếu 1 ô -> không đổi được, dù mọi thứ đã lớn
+  assert.equal(exchangeGift(mk(FARM_SLOTS - 1), 'keo', now).reason, 'not-full');
+  assert.equal(exchangeGift(mk(0), 'keo', now).reason, 'not-full');
+  // đầy nhưng còn cây/trứng chưa lớn
+  assert.equal(exchangeGift(mk(FARM_SLOTS, now), 'keo', now).reason, 'not-ready');
+  const half = mk(); const slots = half.farm.slots.slice(); slots[5] = { id: slots[5].id, at: now - 1000 };
+  assert.equal(exchangeGift({ ...half, farm: { ...half.farm, slots } }, 'keo', now).reason, 'not-ready');
+  for (const bad of ['coins', 'xu', '__proto__', 'constructor', undefined]) assert.equal(exchangeGift(mk(), bad, now).reason, 'bad-choice');
   const full = { ...mk(), gifts: { 'gau-bong': MAX_GIFT, keo: 0 } };
-  assert.equal(harvest(full, 0, 'gau-bong', now).profile.gifts['gau-bong'], MAX_GIFT);
+  assert.equal(exchangeGift(full, 'gau-bong', now).profile.gifts['gau-bong'], MAX_GIFT);
 });
