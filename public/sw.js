@@ -1,5 +1,5 @@
 // Service worker: cache vỏ ứng dụng để chạy offline. Chỉ xử lý GET cùng origin.
-const CACHE = 'tls-v4';
+const CACHE = 'tls-v5';
 const SHELL = [
   './', 'index.html', 'styles.css', 'manifest.webmanifest', 'icon.svg', 'data/lop1.json',
   'src/app.js', 'src/dom.js', 'src/audio.js', 'src/rng.js', 'src/content-schema.js', 'src/generator.js',
