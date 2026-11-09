@@ -1,6 +1,6 @@
 import { h } from '../dom.js';
 import { avatarView } from '../avatar.js';
-import { FARM_ITEMS, BADGES, GIFTS, FARM_SLOTS, MAX_STACK, buyItem, harvest, harvestCoins, findItem, countOf, growthStage, msUntilGrown, formatCountdown } from '../rewards.js';
+import { FARM_ITEMS, BADGES, GIFTS, FARM_SLOTS, MAX_STACK, buyItem, exchangeGift, farmProgress, findItem, countOf, growthStage, msUntilGrown, formatCountdown } from '../rewards.js';
 
 const WEAR_LABEL = { hat: 'Đội', top: 'Mặc' };
 
@@ -10,7 +10,6 @@ export function farmScreen(ctx) {
   let held = null; // vật bé đang cầm để đặt: { id, at, from } (from = chỉ số ô cũ, -1 nếu lấy từ kho)
   let message = '';
   let timers = []; // cây đang lớn trên màn hình hiện tại: để đồng hồ cập nhật từng giây mà không vẽ lại cả trang
-  let harvesting = -1; // ô cây đã chín đang mở bảng thu hoạch
 
   const placedCount = (id) => state.farm.slots.filter((s) => s && s.id === id).length;
   const available = (id) => countOf(state.inventory, id) - placedCount(id) - (held && held.id === id ? 1 : 0);
@@ -33,10 +32,10 @@ export function farmScreen(ctx) {
     const emoji = item ? (item.stages ? item.stages[stage] : item.emoji) : '';
     const grown = item && item.stages && stage === item.stages.length - 1;
     const egg = item && item.kind === 'egg';
-    const ready = grown && item.kind === 'plant'; // chỉ cây chín mới thu hoạch được; gà đã nở thì chỉ đi lại
+    const ready = grown && item.kind === 'plant';
     const label = !item
       ? `Ô ${i + 1}: trống${held ? '. Bấm để đặt vật đang cầm vào đây' : ''}`
-      : ready ? `Ô ${i + 1}: ${item.name}, đã chín. Bấm để thu hoạch`
+      : ready ? `Ô ${i + 1}: ${item.name}, đã chín. Bấm để nhấc lên`
         : item.stages && !grown ? `Ô ${i + 1}: ${item.name}, ${egg ? 'đang ấp' : 'đang lớn'}, ${minutesLabel(msUntilGrown(item, s.at, Date.now()))}. Bấm để nhấc lên`
           : `Ô ${i + 1}: ${egg ? item.hatchName : item.name}. Bấm để nhấc lên`;
     let countdown = null;
@@ -45,13 +44,8 @@ export function farmScreen(ctx) {
       countdown = h('span', { class: 'countdown' + (rem <= 60_000 ? ' soon' : ''), 'aria-hidden': 'true' }, formatCountdown(rem));
     }
     const btn = h('button', {
-      class: 'plot' + (!item && held ? ' target' : '') + (ready && !held ? ' ready' : ''), type: 'button', 'aria-label': label, 'data-key': `slot-${i}`,
+      class: 'plot' + (!item && held ? ' target' : '') + (ready ? ' ready' : ''), type: 'button', 'aria-label': label, 'data-key': `slot-${i}`,
       onClick: () => {
-        harvesting = -1;
-        if (ready && !held) {
-          harvesting = i;
-          return update('h-coins', ''); // bảng thu hoạch tự có tiêu đề, không lặp lại ở dòng trạng thái
-        }
         if (held && !item) {
           const it = findItem(held.id);
           state.farm.slots[i] = { id: held.id, at: held.at };
@@ -96,7 +90,7 @@ export function farmScreen(ctx) {
     if (ripe.length) {
       const plants = [...new Set(ripe.filter((t) => t.kind === 'plant').map((t) => t.name))];
       const hatched = ripe.some((t) => t.kind === 'egg');
-      message = [plants.length ? `${plants.join(', ')} đã chín! Bé thu hoạch nhé 🎉` : '', hatched ? 'Trứng gà đã nở thành gà trống! 🐣' : ''].filter(Boolean).join(' ');
+      message = [plants.length ? `${plants.join(', ')} đã chín! 🎉` : '', hatched ? 'Trứng gà đã nở thành gà trống! 🐣' : ''].filter(Boolean).join(' ');
       ctx.sound('ripe');
     }
     render();
@@ -139,40 +133,29 @@ export function farmScreen(ctx) {
     ]);
   }
 
-  function harvestPanel() {
-    const s = state.farm.slots[harvesting];
-    const item = s && findItem(s.id);
-    if (!item) return null;
-    const take = (choice, what) => {
-      const r = harvest(state, harvesting, choice, Date.now());
-      if (!r.ok) { ctx.sound('bad'); return update(null, 'Cây chưa chín nên chưa thu hoạch được.'); }
-      const idx = harvesting;
-      Object.assign(state, { coins: r.profile.coins, gifts: r.profile.gifts, inventory: r.profile.inventory });
+  /** Bảng đổi quà: chỉ mở khoá khi cả nông trại đã đầy và mọi cây/gà đã lớn hẳn. */
+  function exchangePanel() {
+    const prog = farmProgress(state, Date.now());
+    const status = prog.ready
+      ? 'Nông trại đã đầy và mọi cây, gà đã lớn! Bé chọn 1 món quà nhé. Đổi xong, tất cả ô đất sẽ trống để bé trồng lại.'
+      : !prog.full
+        ? `Hãy đặt cây và gà vào đủ ${prog.total} ô đất (đã có ${prog.placed}/${prog.total} ô) để được đổi quà.`
+        : `Đủ ${prog.total} ô rồi! Chờ mọi cây chín và trứng nở (đã lớn ${prog.grown}/${prog.total} ô) để đổi quà.`;
+    const take = (g) => {
+      const r = exchangeGift(state, g.id, Date.now());
+      if (!r.ok) { ctx.sound('bad'); return update(null, 'Chưa đủ điều kiện đổi quà. Hãy lấp đầy và chờ cây, gà lớn hẳn nhé.'); }
+      Object.assign(state, { gifts: r.profile.gifts, inventory: r.profile.inventory });
       state.farm.slots = r.profile.farm.slots;
-      harvesting = -1;
+      held = null;
       ctx.sound('win');
-      update(`slot-${idx}`, `Bé đã thu hoạch ${item.name} và nhận ${what}!`);
+      update(`h-${g.id}`, `Bé đã đổi được ${g.name.toLowerCase()}! Tất cả ô đất đã trống, bé hãy trồng lại nhé.`);
     };
-    return h('div', { class: 'card harvest', role: 'group', 'aria-label': `Thu hoạch ${item.name}` }, [
-      h('h2', null, `${item.stages[item.stages.length - 1]} ${item.name} đã chín!`),
-      h('p', null, 'Bé muốn đổi lấy gì?'),
-      h('div', { class: 'row' }, [
-        h('button', { class: 'btn primary', type: 'button', 'data-key': 'h-coins', onClick: () => take('coins', `${harvestCoins(item)} xu`) }, `🪙 ${harvestCoins(item)} xu`),
-        ...GIFTS.map((g) => h('button', { class: 'btn', type: 'button', 'data-key': `h-${g.id}`, onClick: () => take(g.id, g.name.toLowerCase()) }, `${g.emoji} ${g.name}`)),
-      ]),
-      h('div', { class: 'row' }, [
-        h('button', {
-          class: 'btn link', type: 'button', 'data-key': 'h-move',
-          onClick: () => {
-            const i = harvesting;
-            held = { id: s.id, at: s.at, from: i };
-            state.farm.slots[i] = null;
-            harvesting = -1;
-            update(null, `Đang cầm ${item.name}. Hãy bấm vào một ô trống để đặt.`);
-          },
-        }, 'Nhấc sang ô khác'),
-        h('button', { class: 'btn link', type: 'button', 'data-key': 'h-cancel', onClick: () => { const i = harvesting; harvesting = -1; update(`slot-${i}`, ''); } }, 'Để lại'),
-      ]),
+    return h('div', { class: 'card exchange', role: 'group', 'aria-label': 'Đổi quà' }, [
+      h('h2', null, `🎁 Đổi quà (${prog.placed}/${prog.total} ô, ${prog.grown} đã lớn)`),
+      h('p', null, status),
+      h('div', { class: 'row' }, GIFTS.map((g) => h('button', {
+        class: 'btn' + (prog.ready ? ' primary' : ''), type: 'button', disabled: !prog.ready, 'data-key': `h-${g.id}`, onClick: () => take(g),
+      }, `${g.emoji} ${g.name}`))),
     ]);
   }
 
@@ -194,7 +177,7 @@ export function farmScreen(ctx) {
       h('p', null, `Bé đang có ${state.coins} xu`),
       h('div', { class: 'farm-hero' }, [avatarView(state, 'big'), h('p', { class: 'small' }, 'Mua nón lá, áo bà ba rồi mặc cho nhân vật. Cây lớn hẳn sau 2 giờ, hãy chờ nhạc báo nhé!')]),
       h('ul', { class: 'farm-grid', 'aria-label': `Nông trại, ${FARM_SLOTS} ô đất` }, Array.from({ length: FARM_SLOTS }, (_, i) => plotView(i))),
-      harvesting >= 0 ? harvestPanel() : null,
+      exchangePanel(),
       h('p', { class: 'help', role: 'status' }, message),
       heldItem
         ? h('div', { class: 'row' }, [
@@ -230,7 +213,7 @@ export function farmScreen(ctx) {
       h('h2', null, 'Kho quà của bé'),
       h('ul', { class: 'list gifts' }, GIFTS.map((g) => h('li', { class: 'gift-item' }, [
         h('span', { class: 'farm-item', 'aria-hidden': 'true' }, g.emoji),
-        h('div', { class: 'grow' }, [h('strong', null, g.name), h('div', { class: 'small' }, state.gifts[g.id] ? `Bé có ${state.gifts[g.id]}` : 'Chưa có. Thu hoạch cây đã lớn và gà trống để nhận!')]),
+        h('div', { class: 'grow' }, [h('strong', null, g.name), h('div', { class: 'small' }, state.gifts[g.id] ? `Bé có ${state.gifts[g.id]}` : 'Chưa có. Lấp đầy nông trại bằng cây và gà đã lớn để đổi quà!')]),
       ]))),
       h('h2', null, 'Cửa hàng làng'),
       h('ul', { class: 'list' }, FARM_ITEMS.map(shopRow)),
