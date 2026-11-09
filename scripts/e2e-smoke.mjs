@@ -113,7 +113,7 @@ await step('Trả lời ĐÚNG được cộng XP và xu', async () => {
       let target = null;
       if (/thêm|tất cả|hái được|Hỏi mẹ có tất cả|gian hàng/i.test(text) && nums.length >= 2) target = nums[0] + nums[1];
       else if (/lấy đi|cho hàng xóm|biếu|bán đi|còn lại/i.test(text) && nums.length >= 2) target = nums[0] - nums[1];
-      else if (/đếm/i.test(text)) target = await page.locator('.visual').first().evaluate((el) => el.children.length);
+      else if (/đếm/i.test(text) && (await page.locator('.visual').count())) target = await page.locator('.visual').first().evaluate((el) => el.children.length); // câu số liền sau/dãy số không có hình: chọn đại
       const idx = labels.findIndex((l) => l.trim() === String(target));
       await page.locator('.choice').nth(idx >= 0 ? idx : 0).click();
     } else if (await page.locator('.tray').count()) {
