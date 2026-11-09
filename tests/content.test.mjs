@@ -29,7 +29,7 @@ test('từ chối id/enum/range sai và hints sai số lượng', () => {
   const mut = [
     (t) => (t.id = '../x'), (t) => (t.op = 'eval'), (t) => (t.type = 'drag'),
     (t) => (t.difficulty = 9), (t) => (t.a = { min: 5, max: 1 }), (t) => (t.hints = ['x']),
-    (t) => (t.item.emoji = '<img>'), (t) => (t.value_tag = 'ads'), (t) => (t.review_status = 'x'),
+    (t) => (t.items[0].emoji = '<img>'), (t) => (t.value_tag = 'ads'), (t) => (t.review_status = 'x'),
   ];
   for (const m of mut) { const t = good(); m(t); assert.equal(validateTemplate(t).ok, false, m.toString()); }
 });
@@ -48,4 +48,28 @@ test('giới hạn kích thước: quá maxTemplates bị cắt', () => {
   const many = Array.from({ length: LIMITS.maxTemplates + 10 }, (_, i) => ({ ...good(), id: `t-${i}` }));
   const r = validateBank({ templates: many });
   assert.ok(r.templates.length <= LIMITS.maxTemplates);
+});
+
+test('mỗi độ khó có ≥8 template để một phiên 8 câu không lặp', () => {
+  const { templates } = validateBank(bank());
+  for (const d of [1, 2, 3]) assert.ok(templates.filter((t) => t.difficulty === d).length >= 8, `độ khó ${d}`);
+});
+
+test('từ chối cấu hình dạng mới sai (so sánh/dãy số/liền trước-sau)', () => {
+  const all = bank().templates;
+  const of = (op) => structuredClone(all.find((t) => t.op === op));
+  const mut = [
+    [of('compare'), (t) => (t.a = { min: 1, max: 2 })],
+    [of('compare'), (t) => (t.ask = 'mid')],
+    [of('neighbor'), (t) => { t.ask = 'prev'; t.a = { min: 0, max: 5 }; }],
+    [of('sequence'), (t) => (t.dir = 'sideways')],
+    [of('sequence'), (t) => (t.step = { min: 0, max: 2 })],
+    [of('sequence'), (t) => { t.dir = 'down'; t.a = { min: 1, max: 2 }; t.step = { min: 2, max: 3 }; }],
+    [of('sign'), (t) => (t.a = { min: 3, max: 3 })],
+    [structuredClone(all.find((t) => t.id === 'l1-add-d1')), (t) => (t.ask = 'c')],
+    [structuredClone(all.find((t) => t.id === 'l1-add-d1')), (t) => (t.text = 'x')], // vừa text vừa texts
+    [structuredClone(all.find((t) => t.id === 'l1-add-d1')), (t) => (t.item = { emoji: '🥚', name: 'x' })], // vừa item vừa items
+    [structuredClone(all.find((t) => t.id === 'l1-add-d1')), (t) => (t.texts = ['{evil}'])],
+  ];
+  for (const [t, m] of mut) { m(t); assert.equal(validateTemplate(t).ok, false, m.toString()); }
 });
