@@ -16,15 +16,66 @@
     "min": 1,
     "max": 5
    },
-   "item": {
-    "emoji": "🥚",
-    "name": "quả trứng"
-   },
-   "text": "Mẹ đi chợ mua trứng gà. Bé hãy đếm xem có bao nhiêu {name}?",
    "hints": [
     "Chỉ vào từng {name} và đếm từng cái một.",
     "Đếm chậm: một, hai, ba… mỗi lần đếm chạm vào một {name}.",
     "Có tất cả {a} {name}. Hãy chọn số {a}."
+   ],
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🐔",
+     "name": "con gà"
+    },
+    {
+     "emoji": "🐄",
+     "name": "con bò"
+    },
+    {
+     "emoji": "🦆",
+     "name": "con vịt"
+    },
+    {
+     "emoji": "🌸",
+     "name": "bông hoa"
+    },
+    {
+     "emoji": "🦋",
+     "name": "con bướm"
+    },
+    {
+     "emoji": "🎈",
+     "name": "quả bóng bay"
+    }
+   ],
+   "texts": [
+    "Bé hãy đếm xem có bao nhiêu {name}?",
+    "Bé đếm giúp {who} xem có bao nhiêu {name} nhé!",
+    "Ở chợ quê có một số {name}. Có tất cả bao nhiêu {name}?",
+    "Đố bé đếm đúng: có bao nhiêu {name} ở đây?"
    ]
   },
   {
@@ -41,15 +92,66 @@
     "min": 6,
     "max": 10
    },
-   "item": {
-    "emoji": "🍌",
-    "name": "quả chuối"
-   },
-   "text": "Bà bán chuối ở chợ quê. Bé đếm giúp bà xem có bao nhiêu {name}?",
    "hints": [
     "Chỉ vào từng {name} và đếm từng cái một.",
     "Đếm chậm: một, hai, ba… mỗi lần đếm chạm vào một {name}.",
     "Có tất cả {a} {name}. Hãy chọn số {a}."
+   ],
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🐔",
+     "name": "con gà"
+    },
+    {
+     "emoji": "🐄",
+     "name": "con bò"
+    },
+    {
+     "emoji": "🦆",
+     "name": "con vịt"
+    },
+    {
+     "emoji": "🌸",
+     "name": "bông hoa"
+    },
+    {
+     "emoji": "🦋",
+     "name": "con bướm"
+    },
+    {
+     "emoji": "🎈",
+     "name": "quả bóng bay"
+    }
+   ],
+   "texts": [
+    "Bé hãy đếm xem có bao nhiêu {name}?",
+    "Bé đếm giúp {who} xem có bao nhiêu {name} nhé!",
+    "Ở chợ quê có một số {name}. Có tất cả bao nhiêu {name}?",
+    "Đố bé đếm đúng: có bao nhiêu {name} ở đây?"
    ]
   },
   {
@@ -66,15 +168,66 @@
     "min": 11,
     "max": 15
    },
-   "item": {
-    "emoji": "🥭",
-    "name": "quả xoài"
-   },
-   "text": "Chợ quê bán xoài ngon. Bé đếm xem có bao nhiêu {name}?",
    "hints": [
     "Chỉ vào từng {name} và đếm từng cái một.",
     "Đếm chậm: một, hai, ba… mỗi lần đếm chạm vào một {name}.",
     "Có tất cả {a} {name}. Hãy chọn số {a}."
+   ],
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🐔",
+     "name": "con gà"
+    },
+    {
+     "emoji": "🐄",
+     "name": "con bò"
+    },
+    {
+     "emoji": "🦆",
+     "name": "con vịt"
+    },
+    {
+     "emoji": "🌸",
+     "name": "bông hoa"
+    },
+    {
+     "emoji": "🦋",
+     "name": "con bướm"
+    },
+    {
+     "emoji": "🎈",
+     "name": "quả bóng bay"
+    }
+   ],
+   "texts": [
+    "Bé hãy đếm xem có bao nhiêu {name}?",
+    "Bé đếm giúp {who} xem có bao nhiêu {name} nhé!",
+    "Ở chợ quê có một số {name}. Có tất cả bao nhiêu {name}?",
+    "Đố bé đếm đúng: có bao nhiêu {name} ở đây?"
    ]
   },
   {
@@ -91,15 +244,66 @@
     "min": 1,
     "max": 5
    },
-   "item": {
-    "emoji": "🥚",
-    "name": "quả trứng"
-   },
-   "text": "Mẹ nhờ bé xếp {a} {name} vào giỏ tre.",
    "hints": [
     "Chỉ vào từng {name} và đếm từng cái một.",
     "Đếm chậm: một, hai, ba… mỗi lần đếm chạm vào một {name}.",
     "Có tất cả {a} {name}. Hãy chọn số {a}."
+   ],
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🍍",
+     "name": "quả dứa"
+    },
+    {
+     "emoji": "🍓",
+     "name": "quả dâu"
+    },
+    {
+     "emoji": "🍅",
+     "name": "quả cà chua"
+    },
+    {
+     "emoji": "🍐",
+     "name": "quả lê"
+    },
+    {
+     "emoji": "🥕",
+     "name": "củ cà rốt"
+    },
+    {
+     "emoji": "🌽",
+     "name": "bắp ngô"
+    }
+   ],
+   "texts": [
+    "Mẹ nhờ bé xếp {a} {name} vào giỏ tre.",
+    "Bé giúp bà xếp {a} {name} vào giỏ tre.",
+    "{who} nhờ bé bỏ {a} {name} vào giỏ.",
+    "Bé bỏ đúng {a} {name} vào giỏ nhé!"
    ]
   },
   {
@@ -116,15 +320,66 @@
     "min": 6,
     "max": 10
    },
-   "item": {
-    "emoji": "🍊",
-    "name": "quả cam"
-   },
-   "text": "Bé giúp bà xếp {a} {name} vào giỏ tre.",
    "hints": [
     "Chỉ vào từng {name} và đếm từng cái một.",
     "Đếm chậm: một, hai, ba… mỗi lần đếm chạm vào một {name}.",
     "Có tất cả {a} {name}. Hãy chọn số {a}."
+   ],
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🍍",
+     "name": "quả dứa"
+    },
+    {
+     "emoji": "🍓",
+     "name": "quả dâu"
+    },
+    {
+     "emoji": "🍅",
+     "name": "quả cà chua"
+    },
+    {
+     "emoji": "🍐",
+     "name": "quả lê"
+    },
+    {
+     "emoji": "🥕",
+     "name": "củ cà rốt"
+    },
+    {
+     "emoji": "🌽",
+     "name": "bắp ngô"
+    }
+   ],
+   "texts": [
+    "Mẹ nhờ bé xếp {a} {name} vào giỏ tre.",
+    "Bé giúp bà xếp {a} {name} vào giỏ tre.",
+    "{who} nhờ bé bỏ {a} {name} vào giỏ.",
+    "Bé bỏ đúng {a} {name} vào giỏ nhé!"
    ]
   },
   {
@@ -141,15 +396,33 @@
     "min": 11,
     "max": 15
    },
-   "item": {
-    "emoji": "🌸",
-    "name": "bông hoa"
-   },
-   "text": "Bé chọn {a} {name} cắm tặng ông bà.",
    "hints": [
     "Chỉ vào từng {name} và đếm từng cái một.",
     "Đếm chậm: một, hai, ba… mỗi lần đếm chạm vào một {name}.",
     "Có tất cả {a} {name}. Hãy chọn số {a}."
+   ],
+   "items": [
+    {
+     "emoji": "🌸",
+     "name": "bông hoa"
+    },
+    {
+     "emoji": "🌼",
+     "name": "bông cúc"
+    },
+    {
+     "emoji": "🪷",
+     "name": "bông sen"
+    },
+    {
+     "emoji": "🌻",
+     "name": "bông hướng dương"
+    }
+   ],
+   "texts": [
+    "Bé chọn {a} {name} cắm tặng ông bà.",
+    "Bé hái {a} {name} tặng bà ngoại.",
+    "Bé xếp {a} {name} vào lọ để bày lên bàn thờ ông bà."
    ]
   },
   {
@@ -171,15 +444,65 @@
     "max": 4
    },
    "maxResult": 10,
-   "item": {
-    "emoji": "🥚",
-    "name": "quả trứng"
-   },
-   "text": "Mẹ có {a} {name}. Bà cho thêm {b} {name}. Hỏi mẹ có tất cả bao nhiêu {name}?",
    "hints": [
     "Hãy đếm tất cả {name} của hai nhóm.",
     "Gộp hai nhóm lại: {a} và {b}.",
     "Đếm tiếp từ {a}, đếm thêm {b} lần nữa. Kết quả là {result}."
+   ],
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🍍",
+     "name": "quả dứa"
+    },
+    {
+     "emoji": "🍓",
+     "name": "quả dâu"
+    },
+    {
+     "emoji": "🍅",
+     "name": "quả cà chua"
+    },
+    {
+     "emoji": "🍐",
+     "name": "quả lê"
+    },
+    {
+     "emoji": "🥕",
+     "name": "củ cà rốt"
+    },
+    {
+     "emoji": "🌽",
+     "name": "bắp ngô"
+    }
+   ],
+   "texts": [
+    "Mẹ có {a} {name}. Bà cho thêm {b} {name}. Hỏi mẹ có tất cả bao nhiêu {name}?",
+    "Trong giỏ có {a} {name}. Bé bỏ thêm {b} {name}. Giỏ có tất cả bao nhiêu {name}?",
+    "{who} có {a} {name}. Bố mua thêm {b} {name}. Hỏi {who} có tất cả bao nhiêu {name}?"
    ]
   },
   {
@@ -201,15 +524,65 @@
     "max": 8
    },
    "maxResult": 10,
-   "item": {
-    "emoji": "🍊",
-    "name": "quả cam"
-   },
-   "text": "Bé hái được {a} {name}, bạn Lan hái thêm {b} {name}. Cả hai bạn hái được bao nhiêu {name}?",
    "hints": [
     "Hãy đếm tất cả {name} của hai nhóm.",
     "Gộp hai nhóm lại: {a} và {b}.",
     "Đếm tiếp từ {a}, đếm thêm {b} lần nữa. Kết quả là {result}."
+   ],
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🍍",
+     "name": "quả dứa"
+    },
+    {
+     "emoji": "🍓",
+     "name": "quả dâu"
+    },
+    {
+     "emoji": "🍅",
+     "name": "quả cà chua"
+    },
+    {
+     "emoji": "🍐",
+     "name": "quả lê"
+    },
+    {
+     "emoji": "🥕",
+     "name": "củ cà rốt"
+    },
+    {
+     "emoji": "🌽",
+     "name": "bắp ngô"
+    }
+   ],
+   "texts": [
+    "Bé hái được {a} {name}, bạn {who} hái thêm {b} {name}. Cả hai bạn hái được bao nhiêu {name}?",
+    "Bé có {a} {name}, bạn {who} cho bé thêm {b} {name}. Bé có tất cả bao nhiêu {name}?",
+    "Rổ thứ nhất có {a} {name}, rổ thứ hai có {b} {name}. Hai rổ có tất cả bao nhiêu {name}?"
    ]
   },
   {
@@ -231,15 +604,65 @@
     "max": 9
    },
    "maxResult": 20,
-   "item": {
-    "emoji": "🥭",
-    "name": "quả xoài"
-   },
-   "text": "Gian hàng có {a} {name}, buổi chiều thêm {b} {name}. Hỏi gian hàng có tất cả bao nhiêu {name}?",
    "hints": [
     "Hãy đếm tất cả {name} của hai nhóm.",
     "Gộp hai nhóm lại: {a} và {b}.",
     "Đếm tiếp từ {a}, đếm thêm {b} lần nữa. Kết quả là {result}."
+   ],
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🍍",
+     "name": "quả dứa"
+    },
+    {
+     "emoji": "🍓",
+     "name": "quả dâu"
+    },
+    {
+     "emoji": "🍅",
+     "name": "quả cà chua"
+    },
+    {
+     "emoji": "🍐",
+     "name": "quả lê"
+    },
+    {
+     "emoji": "🥕",
+     "name": "củ cà rốt"
+    },
+    {
+     "emoji": "🌽",
+     "name": "bắp ngô"
+    }
+   ],
+   "texts": [
+    "Gian hàng có {a} {name}, buổi chiều thêm {b} {name}. Hỏi gian hàng có tất cả bao nhiêu {name}?",
+    "Sáng nay bác bán được {a} {name}, chiều bán thêm {b} {name}. Cả ngày bác bán được bao nhiêu {name}?",
+    "Bác nông dân thu hoạch {a} {name} buổi sáng và {b} {name} buổi chiều. Cả ngày thu hoạch được bao nhiêu {name}?"
    ]
   },
   {
@@ -261,15 +684,65 @@
     "max": 3
    },
    "maxResult": 10,
-   "item": {
-    "emoji": "🍌",
-    "name": "quả chuối"
-   },
-   "text": "Mẹ có {a} {name}, mẹ cho hàng xóm {b} {name}. Hỏi mẹ còn lại bao nhiêu {name}?",
    "hints": [
     "Có {a} {name}, lấy đi {b} cái.",
     "Gạch bỏ {b} {name} rồi đếm số còn lại.",
     "Từ {a} đếm lùi {b} lần. Còn lại {result}."
+   ],
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🍍",
+     "name": "quả dứa"
+    },
+    {
+     "emoji": "🍓",
+     "name": "quả dâu"
+    },
+    {
+     "emoji": "🍅",
+     "name": "quả cà chua"
+    },
+    {
+     "emoji": "🍐",
+     "name": "quả lê"
+    },
+    {
+     "emoji": "🥕",
+     "name": "củ cà rốt"
+    },
+    {
+     "emoji": "🌽",
+     "name": "bắp ngô"
+    }
+   ],
+   "texts": [
+    "Mẹ có {a} {name}, mẹ cho hàng xóm {b} {name}. Hỏi mẹ còn lại bao nhiêu {name}?",
+    "Trong giỏ có {a} {name}. {who} lấy đi {b} {name}. Hỏi giỏ còn lại bao nhiêu {name}?",
+    "Bé có {a} {name}, bé ăn hết {b} {name}. Hỏi bé còn lại bao nhiêu {name}?"
    ]
   },
   {
@@ -291,15 +764,65 @@
     "max": 7
    },
    "maxResult": 10,
-   "item": {
-    "emoji": "🍊",
-    "name": "quả cam"
-   },
-   "text": "Bé có {a} {name}, bé biếu bà {b} {name}. Hỏi bé còn lại bao nhiêu {name}?",
    "hints": [
     "Có {a} {name}, lấy đi {b} cái.",
     "Gạch bỏ {b} {name} rồi đếm số còn lại.",
     "Từ {a} đếm lùi {b} lần. Còn lại {result}."
+   ],
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🍍",
+     "name": "quả dứa"
+    },
+    {
+     "emoji": "🍓",
+     "name": "quả dâu"
+    },
+    {
+     "emoji": "🍅",
+     "name": "quả cà chua"
+    },
+    {
+     "emoji": "🍐",
+     "name": "quả lê"
+    },
+    {
+     "emoji": "🥕",
+     "name": "củ cà rốt"
+    },
+    {
+     "emoji": "🌽",
+     "name": "bắp ngô"
+    }
+   ],
+   "texts": [
+    "Bé có {a} {name}, bé biếu bà {b} {name}. Hỏi bé còn lại bao nhiêu {name}?",
+    "{who} có {a} {name}, {who} biếu ông {b} {name}. Hỏi {who} còn lại bao nhiêu {name}?",
+    "Bé có {a} {name}, bé chia cho bạn {who} {b} {name}. Hỏi bé còn lại bao nhiêu {name}?"
    ]
   },
   {
@@ -321,15 +844,65 @@
     "max": 9
    },
    "maxResult": 20,
-   "item": {
-    "emoji": "🥚",
-    "name": "quả trứng"
-   },
-   "text": "Gà mái đẻ được {a} {name}, mẹ bán đi {b} {name}. Hỏi còn lại bao nhiêu {name}?",
    "hints": [
     "Có {a} {name}, lấy đi {b} cái.",
     "Gạch bỏ {b} {name} rồi đếm số còn lại.",
     "Từ {a} đếm lùi {b} lần. Còn lại {result}."
+   ],
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🍍",
+     "name": "quả dứa"
+    },
+    {
+     "emoji": "🍓",
+     "name": "quả dâu"
+    },
+    {
+     "emoji": "🍅",
+     "name": "quả cà chua"
+    },
+    {
+     "emoji": "🍐",
+     "name": "quả lê"
+    },
+    {
+     "emoji": "🥕",
+     "name": "củ cà rốt"
+    },
+    {
+     "emoji": "🌽",
+     "name": "bắp ngô"
+    }
+   ],
+   "texts": [
+    "Mẹ để dành {a} {name}, mẹ dùng hết {b} {name}. Hỏi mẹ còn lại bao nhiêu {name}?",
+    "Cửa hàng có {a} {name}, đã bán đi {b} {name}. Hỏi còn lại bao nhiêu {name}?",
+    "Vườn nhà bác có {a} {name}, bác đem biếu hàng xóm {b} {name}. Hỏi vườn còn lại bao nhiêu {name}?"
    ]
   },
   {
@@ -367,13 +940,32 @@
      "emoji": "🟦",
      "name": "khăn mùi xoa",
      "shape": "vuong"
+    },
+    {
+     "emoji": "🔺",
+     "name": "khăn quàng đỏ",
+     "shape": "tam-giac"
+    },
+    {
+     "emoji": "🟡",
+     "name": "đồng xu",
+     "shape": "tron"
+    },
+    {
+     "emoji": "🟨",
+     "name": "ô cửa sổ",
+     "shape": "vuong"
     }
    ],
-   "text": "Ở chợ quê có {name}. Nó có dạng hình gì?",
    "hints": [
     "Nhìn kĩ hình dạng của {name}.",
     "Hình tròn không có góc; hình vuông có 4 góc; hình tam giác có 3 góc.",
     "{name} có dạng hình nào trong ba hình này?"
+   ],
+   "texts": [
+    "Ở chợ quê có {name}. Nó có dạng hình gì?",
+    "Bé thấy {name}. Theo bé, nó giống hình gì?",
+    "{who} chỉ vào {name} và hỏi: đây là hình gì nhỉ?"
    ]
   },
   {
@@ -411,13 +1003,32 @@
      "emoji": "🟦",
      "name": "khăn mùi xoa",
      "shape": "vuong"
+    },
+    {
+     "emoji": "🔺",
+     "name": "khăn quàng đỏ",
+     "shape": "tam-giac"
+    },
+    {
+     "emoji": "🟡",
+     "name": "đồng xu",
+     "shape": "tron"
+    },
+    {
+     "emoji": "🟨",
+     "name": "ô cửa sổ",
+     "shape": "vuong"
     }
    ],
-   "text": "Bé nhìn thấy {name} trên sạp hàng. Hình dạng của nó giống hình nào?",
    "hints": [
     "Nhìn kĩ hình dạng của {name}.",
     "Hình tròn không có góc; hình vuông có 4 góc; hình tam giác có 3 góc.",
     "{name} có dạng hình nào trong ba hình này?"
+   ],
+   "texts": [
+    "Bé nhìn thấy {name} trên sạp hàng. Hình dạng của nó giống hình nào?",
+    "Đố bé: {name} có dạng hình nào?",
+    "Hình dạng của {name} giống hình nào trong ba hình dưới đây?"
    ]
   },
   {
@@ -455,13 +1066,31 @@
      "emoji": "🟦",
      "name": "khăn mùi xoa",
      "shape": "vuong"
+    },
+    {
+     "emoji": "🔺",
+     "name": "khăn quàng đỏ",
+     "shape": "tam-giac"
+    },
+    {
+     "emoji": "🟡",
+     "name": "đồng xu",
+     "shape": "tron"
+    },
+    {
+     "emoji": "🟨",
+     "name": "ô cửa sổ",
+     "shape": "vuong"
     }
    ],
-   "text": "Giúp mẹ xếp đồ vào đúng giỏ: mỗi món đồ có dạng hình gì thì vào giỏ hình đó.",
    "hints": [
     "Nhìn kĩ từng món đồ.",
     "Hình tròn không có góc; hình vuông có 4 góc.",
     "Chạm món đồ rồi chạm giỏ đúng hình dạng của nó."
+   ],
+   "texts": [
+    "Giúp mẹ xếp đồ vào đúng giỏ: mỗi món đồ có dạng hình gì thì vào giỏ hình đó.",
+    "Bé giúp {who} xếp từng món đồ vào giỏ đúng hình dạng nhé."
    ]
   },
   {
@@ -499,13 +1128,1043 @@
      "emoji": "🟦",
      "name": "khăn mùi xoa",
      "shape": "vuong"
+    },
+    {
+     "emoji": "🔺",
+     "name": "khăn quàng đỏ",
+     "shape": "tam-giac"
+    },
+    {
+     "emoji": "🟡",
+     "name": "đồng xu",
+     "shape": "tron"
+    },
+    {
+     "emoji": "🟨",
+     "name": "ô cửa sổ",
+     "shape": "vuong"
     }
    ],
-   "text": "Cả làng cùng dọn sạp chợ! Bé phân loại từng món đồ theo hình dạng nhé.",
    "hints": [
     "Nhìn kĩ từng món đồ.",
     "Hình tròn không có góc; hình vuông có 4 góc.",
     "Chạm món đồ rồi chạm giỏ đúng hình dạng của nó."
+   ],
+   "texts": [
+    "Cả làng cùng dọn sạp chợ! Bé phân loại từng món đồ theo hình dạng nhé.",
+    "Phiên chợ sắp mở! Bé xếp các món đồ vào giỏ đúng hình dạng giúp bà con."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-add-pond-d1",
+   "topic": "cong-pham-vi-20",
+   "skill": "calc",
+   "difficulty": 1,
+   "op": "add",
+   "value_tag": "bao-ve-moi-truong",
+   "a": {
+    "min": 1,
+    "max": 5
+   },
+   "b": {
+    "min": 1,
+    "max": 4
+   },
+   "maxResult": 10,
+   "items": [
+    {
+     "emoji": "🦆",
+     "name": "con vịt"
+    },
+    {
+     "emoji": "🐟",
+     "name": "con cá"
+    },
+    {
+     "emoji": "🐸",
+     "name": "con ếch"
+    },
+    {
+     "emoji": "🐢",
+     "name": "con rùa"
+    }
+   ],
+   "texts": [
+    "Trong ao có {a} {name}. Có thêm {b} {name} bơi tới. Hỏi trong ao có tất cả bao nhiêu {name}?",
+    "Ao làng có {a} {name}, thêm {b} {name} nữa. Hỏi ao có tất cả bao nhiêu {name}?"
+   ],
+   "hints": [
+    "Hãy đếm tất cả {name} của hai nhóm.",
+    "Gộp hai nhóm lại: {a} và {b}.",
+    "Đếm tiếp từ {a}, đếm thêm {b} lần nữa. Kết quả là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-sub-pond-d1",
+   "topic": "tru-pham-vi-20",
+   "skill": "calc",
+   "difficulty": 1,
+   "op": "sub",
+   "value_tag": "none",
+   "a": {
+    "min": 3,
+    "max": 8
+   },
+   "b": {
+    "min": 1,
+    "max": 3
+   },
+   "maxResult": 10,
+   "items": [
+    {
+     "emoji": "🦆",
+     "name": "con vịt"
+    },
+    {
+     "emoji": "🐟",
+     "name": "con cá"
+    },
+    {
+     "emoji": "🐸",
+     "name": "con ếch"
+    },
+    {
+     "emoji": "🐢",
+     "name": "con rùa"
+    }
+   ],
+   "texts": [
+    "Trong ao có {a} {name}. {b} {name} bơi đi chỗ khác. Hỏi trong ao còn lại bao nhiêu {name}?",
+    "Ao làng có {a} {name}, {b} {name} chui vào bụi sen. Hỏi còn lại bao nhiêu {name} ngoài ao?"
+   ],
+   "hints": [
+    "Có {a} {name}, lấy đi {b} cái.",
+    "Gạch bỏ {b} {name} rồi đếm số còn lại.",
+    "Từ {a} đếm lùi {b} lần. Còn lại {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-add-pond-d2",
+   "topic": "cong-pham-vi-20",
+   "skill": "word",
+   "difficulty": 2,
+   "op": "add",
+   "value_tag": "bao-ve-moi-truong",
+   "a": {
+    "min": 3,
+    "max": 9
+   },
+   "b": {
+    "min": 2,
+    "max": 8
+   },
+   "maxResult": 10,
+   "items": [
+    {
+     "emoji": "🦆",
+     "name": "con vịt"
+    },
+    {
+     "emoji": "🐟",
+     "name": "con cá"
+    },
+    {
+     "emoji": "🐸",
+     "name": "con ếch"
+    },
+    {
+     "emoji": "🐢",
+     "name": "con rùa"
+    }
+   ],
+   "texts": [
+    "Sáng nay bé thấy {a} {name} ở bờ ao, chiều thấy thêm {b} {name}. Bé thấy tất cả bao nhiêu {name}?",
+    "Ao bên trái có {a} {name}, ao bên phải có {b} {name}. Hai ao có tất cả bao nhiêu {name}?"
+   ],
+   "hints": [
+    "Hãy đếm tất cả {name} của hai nhóm.",
+    "Gộp hai nhóm lại: {a} và {b}.",
+    "Đếm tiếp từ {a}, đếm thêm {b} lần nữa. Kết quả là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-sub-pond-d2",
+   "topic": "tru-pham-vi-20",
+   "skill": "word",
+   "difficulty": 2,
+   "op": "sub",
+   "value_tag": "none",
+   "a": {
+    "min": 6,
+    "max": 10
+   },
+   "b": {
+    "min": 2,
+    "max": 7
+   },
+   "maxResult": 10,
+   "items": [
+    {
+     "emoji": "🦆",
+     "name": "con vịt"
+    },
+    {
+     "emoji": "🐟",
+     "name": "con cá"
+    },
+    {
+     "emoji": "🐸",
+     "name": "con ếch"
+    },
+    {
+     "emoji": "🐢",
+     "name": "con rùa"
+    }
+   ],
+   "texts": [
+    "Ao có {a} {name}, {b} {name} bị bé thả về sông. Hỏi ao còn lại bao nhiêu {name}?",
+    "Bác nuôi {a} {name}, bác bán đi {b} {name}. Hỏi bác còn lại bao nhiêu {name}?"
+   ],
+   "hints": [
+    "Có {a} {name}, lấy đi {b} cái.",
+    "Gạch bỏ {b} {name} rồi đếm số còn lại.",
+    "Từ {a} đếm lùi {b} lần. Còn lại {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-add-pond-d3",
+   "topic": "cong-pham-vi-20",
+   "skill": "word",
+   "difficulty": 3,
+   "op": "add",
+   "value_tag": "bao-ve-moi-truong",
+   "a": {
+    "min": 6,
+    "max": 12
+   },
+   "b": {
+    "min": 3,
+    "max": 9
+   },
+   "maxResult": 20,
+   "items": [
+    {
+     "emoji": "🦆",
+     "name": "con vịt"
+    },
+    {
+     "emoji": "🐟",
+     "name": "con cá"
+    },
+    {
+     "emoji": "🐸",
+     "name": "con ếch"
+    },
+    {
+     "emoji": "🐢",
+     "name": "con rùa"
+    }
+   ],
+   "texts": [
+    "Đầm sen có {a} {name}, mùa mưa thêm {b} {name} kéo về. Hỏi đầm có tất cả bao nhiêu {name}?",
+    "Bác nuôi {a} {name} ở ao nhà và {b} {name} ở ao vườn. Bác nuôi tất cả bao nhiêu {name}?"
+   ],
+   "hints": [
+    "Hãy đếm tất cả {name} của hai nhóm.",
+    "Gộp hai nhóm lại: {a} và {b}.",
+    "Đếm tiếp từ {a}, đếm thêm {b} lần nữa. Kết quả là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-sub-egg-d3",
+   "topic": "tru-pham-vi-20",
+   "skill": "word",
+   "difficulty": 3,
+   "op": "sub",
+   "value_tag": "tiet-kiem",
+   "a": {
+    "min": 11,
+    "max": 20
+   },
+   "b": {
+    "min": 3,
+    "max": 9
+   },
+   "maxResult": 20,
+   "item": {
+    "emoji": "🥚",
+    "name": "quả trứng"
+   },
+   "text": "Gà mái đẻ được {a} {name}, mẹ bán đi {b} {name}. Hỏi còn lại bao nhiêu {name}?",
+   "hints": [
+    "Có {a} {name}, lấy đi {b} cái.",
+    "Gạch bỏ {b} {name} rồi đếm số còn lại.",
+    "Từ {a} đếm lùi {b} lần. Còn lại {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-miss-add-d2",
+   "topic": "tim-so-con-thieu",
+   "skill": "word",
+   "difficulty": 2,
+   "op": "add",
+   "ask": "b",
+   "value_tag": "tuong-than",
+   "a": {
+    "min": 2,
+    "max": 8
+   },
+   "b": {
+    "min": 1,
+    "max": 5
+   },
+   "maxResult": 10,
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🍍",
+     "name": "quả dứa"
+    },
+    {
+     "emoji": "🍓",
+     "name": "quả dâu"
+    },
+    {
+     "emoji": "🍅",
+     "name": "quả cà chua"
+    },
+    {
+     "emoji": "🍐",
+     "name": "quả lê"
+    },
+    {
+     "emoji": "🥕",
+     "name": "củ cà rốt"
+    },
+    {
+     "emoji": "🌽",
+     "name": "bắp ngô"
+    }
+   ],
+   "texts": [
+    "Bé có {a} {name}. Mẹ cho bé thêm mấy {name} nữa thì bé có {result} {name}. Mẹ đã cho thêm mấy {name}?",
+    "Trong giỏ có {a} {name}. Bà bỏ thêm vài {name} nên giỏ có {result} {name}. Bà đã bỏ thêm mấy {name}?"
+   ],
+   "hints": [
+    "Bé có {a}, sau đó có {result}. Cần thêm bao nhiêu để từ {a} thành {result}?",
+    "Đếm tiếp từ {a} cho đến khi tới {result}, xem đã đếm thêm mấy lần.",
+    "{result} − {a} = {b}. Hãy chọn số {b}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-miss-sub-d2",
+   "topic": "tim-so-con-thieu",
+   "skill": "word",
+   "difficulty": 2,
+   "op": "sub",
+   "ask": "b",
+   "value_tag": "yeu-kinh-ong-ba",
+   "a": {
+    "min": 6,
+    "max": 10
+   },
+   "b": {
+    "min": 2,
+    "max": 6
+   },
+   "maxResult": 10,
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🍍",
+     "name": "quả dứa"
+    },
+    {
+     "emoji": "🍓",
+     "name": "quả dâu"
+    },
+    {
+     "emoji": "🍅",
+     "name": "quả cà chua"
+    },
+    {
+     "emoji": "🍐",
+     "name": "quả lê"
+    },
+    {
+     "emoji": "🥕",
+     "name": "củ cà rốt"
+    },
+    {
+     "emoji": "🌽",
+     "name": "bắp ngô"
+    }
+   ],
+   "texts": [
+    "Bé có {a} {name}. Bé biếu bà một ít {name}, bé còn lại {result} {name}. Bé đã biếu bà mấy {name}?",
+    "Mẹ có {a} {name}, mẹ cho hàng xóm vài {name} nên còn {result} {name}. Mẹ đã cho mấy {name}?"
+   ],
+   "hints": [
+    "Lúc đầu có {a}, bây giờ còn {result}. Đã bớt đi bao nhiêu?",
+    "Đếm lùi từ {a} cho đến khi còn {result}, xem đã đếm lùi mấy lần.",
+    "{a} − {result} = {b}. Hãy chọn số {b}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-miss-add-d3",
+   "topic": "tim-so-con-thieu",
+   "skill": "word",
+   "difficulty": 3,
+   "op": "add",
+   "ask": "b",
+   "value_tag": "trung-thuc",
+   "a": {
+    "min": 5,
+    "max": 12
+   },
+   "b": {
+    "min": 3,
+    "max": 9
+   },
+   "maxResult": 20,
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🍍",
+     "name": "quả dứa"
+    },
+    {
+     "emoji": "🍓",
+     "name": "quả dâu"
+    },
+    {
+     "emoji": "🍅",
+     "name": "quả cà chua"
+    },
+    {
+     "emoji": "🍐",
+     "name": "quả lê"
+    },
+    {
+     "emoji": "🥕",
+     "name": "củ cà rốt"
+    },
+    {
+     "emoji": "🌽",
+     "name": "bắp ngô"
+    }
+   ],
+   "texts": [
+    "Gian hàng có {a} {name}. Chiều nhập thêm vài {name} nên có tất cả {result} {name}. Gian hàng đã nhập thêm mấy {name}?",
+    "Bác nông dân hái buổi sáng {a} {name}. Buổi chiều bác hái thêm một ít, cả ngày được {result} {name}. Buổi chiều bác hái mấy {name}?"
+   ],
+   "hints": [
+    "Bé có {a}, sau đó có {result}. Cần thêm bao nhiêu để từ {a} thành {result}?",
+    "Đếm tiếp từ {a} cho đến khi tới {result}, xem đã đếm thêm mấy lần.",
+    "{result} − {a} = {b}. Hãy chọn số {b}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-miss-sub-d3",
+   "topic": "tim-so-con-thieu",
+   "skill": "word",
+   "difficulty": 3,
+   "op": "sub",
+   "ask": "b",
+   "value_tag": "tiet-kiem",
+   "a": {
+    "min": 11,
+    "max": 20
+   },
+   "b": {
+    "min": 3,
+    "max": 9
+   },
+   "maxResult": 20,
+   "items": [
+    {
+     "emoji": "🥚",
+     "name": "quả trứng"
+    },
+    {
+     "emoji": "🍌",
+     "name": "quả chuối"
+    },
+    {
+     "emoji": "🥭",
+     "name": "quả xoài"
+    },
+    {
+     "emoji": "🍊",
+     "name": "quả cam"
+    },
+    {
+     "emoji": "🍎",
+     "name": "quả táo"
+    },
+    {
+     "emoji": "🥥",
+     "name": "quả dừa"
+    },
+    {
+     "emoji": "🍍",
+     "name": "quả dứa"
+    },
+    {
+     "emoji": "🍓",
+     "name": "quả dâu"
+    },
+    {
+     "emoji": "🍅",
+     "name": "quả cà chua"
+    },
+    {
+     "emoji": "🍐",
+     "name": "quả lê"
+    },
+    {
+     "emoji": "🥕",
+     "name": "củ cà rốt"
+    },
+    {
+     "emoji": "🌽",
+     "name": "bắp ngô"
+    }
+   ],
+   "texts": [
+    "Mẹ có {a} {name}, mẹ dùng một ít nên còn {result} {name}. Mẹ đã dùng mấy {name}?",
+    "Cửa hàng có {a} {name}, bán đi một ít thì còn {result} {name}. Cửa hàng đã bán mấy {name}?"
+   ],
+   "hints": [
+    "Lúc đầu có {a}, bây giờ còn {result}. Đã bớt đi bao nhiêu?",
+    "Đếm lùi từ {a} cho đến khi còn {result}, xem đã đếm lùi mấy lần.",
+    "{a} − {result} = {b}. Hãy chọn số {b}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-next-d1",
+   "topic": "day-so",
+   "skill": "calc",
+   "difficulty": 1,
+   "op": "neighbor",
+   "ask": "next",
+   "value_tag": "none",
+   "a": {
+    "min": 1,
+    "max": 8
+   },
+   "texts": [
+    "Số liền sau của {a} là số nào?",
+    "Đếm lên nào! Ngay sau số {a} là số mấy?"
+   ],
+   "hints": [
+    "Đếm các số theo thứ tự: … {a}, …",
+    "Số liền sau là số đứng ngay sau {a} khi đếm lên.",
+    "Số liền sau của {a} là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-prev-d2",
+   "topic": "day-so",
+   "skill": "calc",
+   "difficulty": 2,
+   "op": "neighbor",
+   "ask": "prev",
+   "value_tag": "none",
+   "a": {
+    "min": 2,
+    "max": 12
+   },
+   "texts": [
+    "Số liền trước của {a} là số nào?",
+    "Đếm lùi nào! Ngay trước số {a} là số mấy?"
+   ],
+   "hints": [
+    "Đếm lùi các số: … {a}, …",
+    "Số liền trước là số đứng ngay trước {a} khi đếm lùi.",
+    "Số liền trước của {a} là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-next-d3",
+   "topic": "day-so",
+   "skill": "calc",
+   "difficulty": 3,
+   "op": "neighbor",
+   "ask": "next",
+   "value_tag": "none",
+   "a": {
+    "min": 10,
+    "max": 19
+   },
+   "texts": [
+    "Số liền sau của {a} là số nào?",
+    "{who} đang đếm lên: … {a}, … Số tiếp theo là số nào?"
+   ],
+   "hints": [
+    "Đếm các số theo thứ tự: … {a}, …",
+    "Số liền sau là số đứng ngay sau {a} khi đếm lên.",
+    "Số liền sau của {a} là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-prev-d3",
+   "topic": "day-so",
+   "skill": "calc",
+   "difficulty": 3,
+   "op": "neighbor",
+   "ask": "prev",
+   "value_tag": "none",
+   "a": {
+    "min": 11,
+    "max": 20
+   },
+   "texts": [
+    "Số liền trước của {a} là số nào?",
+    "{who} đang đếm lùi: … {a}, … Số đứng ngay trước {a} là số nào?"
+   ],
+   "hints": [
+    "Đếm lùi các số: … {a}, …",
+    "Số liền trước là số đứng ngay trước {a} khi đếm lùi.",
+    "Số liền trước của {a} là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-seq-up-d1",
+   "topic": "day-so",
+   "skill": "calc",
+   "difficulty": 1,
+   "op": "sequence",
+   "dir": "up",
+   "value_tag": "none",
+   "a": {
+    "min": 1,
+    "max": 6
+   },
+   "step": {
+    "min": 1,
+    "max": 1
+   },
+   "maxResult": 10,
+   "texts": [
+    "Điền số còn thiếu: {a}, {b}, {c}, … ?",
+    "Dãy số của {who}: {a}, {b}, {c}, … Số tiếp theo là số nào?",
+    "Bé hãy đếm tiếp nào: {a}, {b}, {c}, … ?"
+   ],
+   "hints": [
+    "Nhìn xem mỗi số hơn kém số đứng trước bao nhiêu.",
+    "Mỗi số lớn hơn số đứng trước {step} đơn vị: {a}, {b}, {c}, …",
+    "Số tiếp theo là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-seq-up-d2",
+   "topic": "day-so",
+   "skill": "calc",
+   "difficulty": 2,
+   "op": "sequence",
+   "dir": "up",
+   "value_tag": "none",
+   "a": {
+    "min": 1,
+    "max": 10
+   },
+   "step": {
+    "min": 1,
+    "max": 2
+   },
+   "maxResult": 20,
+   "texts": [
+    "Điền số còn thiếu: {a}, {b}, {c}, … ?",
+    "Dãy số của {who}: {a}, {b}, {c}, … Số tiếp theo là số nào?",
+    "Bé hãy đếm tiếp nào: {a}, {b}, {c}, … ?"
+   ],
+   "hints": [
+    "Nhìn xem mỗi số hơn kém số đứng trước bao nhiêu.",
+    "Mỗi số lớn hơn số đứng trước {step} đơn vị: {a}, {b}, {c}, …",
+    "Số tiếp theo là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-seq-down-d2",
+   "topic": "day-so",
+   "skill": "calc",
+   "difficulty": 2,
+   "op": "sequence",
+   "dir": "down",
+   "value_tag": "none",
+   "a": {
+    "min": 6,
+    "max": 14
+   },
+   "step": {
+    "min": 1,
+    "max": 1
+   },
+   "maxResult": 20,
+   "texts": [
+    "Điền số còn thiếu: {a}, {b}, {c}, … ?",
+    "Dãy số của {who}: {a}, {b}, {c}, … Số tiếp theo là số nào?",
+    "Bé hãy đếm tiếp nào: {a}, {b}, {c}, … ?"
+   ],
+   "hints": [
+    "Nhìn xem mỗi số hơn kém số đứng trước bao nhiêu.",
+    "Mỗi số bé hơn số đứng trước {step} đơn vị: {a}, {b}, {c}, …",
+    "Số tiếp theo là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-seq-up-d3",
+   "topic": "day-so",
+   "skill": "calc",
+   "difficulty": 3,
+   "op": "sequence",
+   "dir": "up",
+   "value_tag": "none",
+   "a": {
+    "min": 1,
+    "max": 5
+   },
+   "step": {
+    "min": 2,
+    "max": 5
+   },
+   "maxResult": 20,
+   "texts": [
+    "Điền số còn thiếu: {a}, {b}, {c}, … ?",
+    "Dãy số của {who}: {a}, {b}, {c}, … Số tiếp theo là số nào?",
+    "Bé hãy đếm tiếp nào: {a}, {b}, {c}, … ?"
+   ],
+   "hints": [
+    "Nhìn xem mỗi số hơn kém số đứng trước bao nhiêu.",
+    "Mỗi số lớn hơn số đứng trước {step} đơn vị: {a}, {b}, {c}, …",
+    "Số tiếp theo là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-seq-down-d3",
+   "topic": "day-so",
+   "skill": "calc",
+   "difficulty": 3,
+   "op": "sequence",
+   "dir": "down",
+   "value_tag": "none",
+   "a": {
+    "min": 12,
+    "max": 20
+   },
+   "step": {
+    "min": 2,
+    "max": 3
+   },
+   "maxResult": 20,
+   "texts": [
+    "Điền số còn thiếu: {a}, {b}, {c}, … ?",
+    "Dãy số của {who}: {a}, {b}, {c}, … Số tiếp theo là số nào?",
+    "Bé hãy đếm tiếp nào: {a}, {b}, {c}, … ?"
+   ],
+   "hints": [
+    "Nhìn xem mỗi số hơn kém số đứng trước bao nhiêu.",
+    "Mỗi số bé hơn số đứng trước {step} đơn vị: {a}, {b}, {c}, …",
+    "Số tiếp theo là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-max-d1",
+   "topic": "so-sanh",
+   "skill": "calc",
+   "difficulty": 1,
+   "op": "compare",
+   "ask": "max",
+   "value_tag": "none",
+   "a": {
+    "min": 1,
+    "max": 10
+   },
+   "texts": [
+    "Trong các số {a}, {b}, {c}, số nào lớn nhất?",
+    "Bé chọn số lớn nhất trong ba số: {a}, {b}, {c}."
+   ],
+   "hints": [
+    "So sánh từng cặp số với nhau.",
+    "Số nào đếm tới sau cùng thì lớn hơn.",
+    "Trong {a}, {b}, {c}, số lớn nhất là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-min-d2",
+   "topic": "so-sanh",
+   "skill": "calc",
+   "difficulty": 2,
+   "op": "compare",
+   "ask": "min",
+   "value_tag": "none",
+   "a": {
+    "min": 3,
+    "max": 15
+   },
+   "texts": [
+    "Trong các số {a}, {b}, {c}, số nào bé nhất?",
+    "Bé chọn số bé nhất trong ba số: {a}, {b}, {c}."
+   ],
+   "hints": [
+    "So sánh từng cặp số với nhau.",
+    "Số nào đếm tới đầu tiên thì bé hơn.",
+    "Trong {a}, {b}, {c}, số bé nhất là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-max-d2",
+   "topic": "so-sanh",
+   "skill": "calc",
+   "difficulty": 2,
+   "op": "compare",
+   "ask": "max",
+   "value_tag": "none",
+   "a": {
+    "min": 5,
+    "max": 20
+   },
+   "texts": [
+    "Trong các số {a}, {b}, {c}, số nào lớn nhất?",
+    "{who} có ba tấm thẻ số: {a}, {b}, {c}. Tấm thẻ nào có số lớn nhất?"
+   ],
+   "hints": [
+    "So sánh từng cặp số với nhau.",
+    "Số nào đếm tới sau cùng thì lớn hơn.",
+    "Trong {a}, {b}, {c}, số lớn nhất là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-min-d3",
+   "topic": "so-sanh",
+   "skill": "calc",
+   "difficulty": 3,
+   "op": "compare",
+   "ask": "min",
+   "value_tag": "none",
+   "a": {
+    "min": 8,
+    "max": 20
+   },
+   "texts": [
+    "Trong các số {a}, {b}, {c}, số nào bé nhất?",
+    "{who} có ba tấm thẻ số: {a}, {b}, {c}. Tấm thẻ nào có số bé nhất?"
+   ],
+   "hints": [
+    "So sánh từng cặp số với nhau.",
+    "Số nào đếm tới đầu tiên thì bé hơn.",
+    "Trong {a}, {b}, {c}, số bé nhất là {result}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-sign-d1",
+   "topic": "so-sanh",
+   "skill": "calc",
+   "difficulty": 1,
+   "op": "sign",
+   "value_tag": "none",
+   "a": {
+    "min": 1,
+    "max": 10
+   },
+   "texts": [
+    "Chọn dấu thích hợp: {a} … {b}",
+    "Điền dấu vào chỗ trống: {a} … {b}"
+   ],
+   "hints": [
+    "Số nào đứng sau trong dãy đếm thì lớn hơn.",
+    "Dấu lớn và dấu bé luôn có miệng mở về phía số lớn hơn; dấu bằng dùng khi hai số giống nhau.",
+    "Đáp án: {a} {result} {b}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-sign-d2",
+   "topic": "so-sanh",
+   "skill": "calc",
+   "difficulty": 2,
+   "op": "sign",
+   "value_tag": "none",
+   "a": {
+    "min": 5,
+    "max": 20
+   },
+   "texts": [
+    "Chọn dấu thích hợp: {a} … {b}",
+    "Điền dấu vào chỗ trống: {a} … {b}"
+   ],
+   "hints": [
+    "Số nào đứng sau trong dãy đếm thì lớn hơn.",
+    "Dấu lớn và dấu bé luôn có miệng mở về phía số lớn hơn; dấu bằng dùng khi hai số giống nhau.",
+    "Đáp án: {a} {result} {b}."
+   ]
+  },
+  {
+   "grade": 1,
+   "type": "choice",
+   "review_status": "approved",
+   "id": "l1-sign-d3",
+   "topic": "so-sanh",
+   "skill": "calc",
+   "difficulty": 3,
+   "op": "sign",
+   "value_tag": "none",
+   "a": {
+    "min": 10,
+    "max": 20
+   },
+   "texts": [
+    "Chọn dấu thích hợp: {a} … {b}",
+    "{who} so sánh hai số {a} và {b}. Bé điền dấu giúp bạn nhé: {a} … {b}"
+   ],
+   "hints": [
+    "Số nào đứng sau trong dãy đếm thì lớn hơn.",
+    "Dấu lớn và dấu bé luôn có miệng mở về phía số lớn hơn; dấu bằng dùng khi hai số giống nhau.",
+    "Đáp án: {a} {result} {b}."
    ]
   }
  ]
